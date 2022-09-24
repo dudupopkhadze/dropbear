@@ -27,7 +27,7 @@ describe(parse, () => {
   });
   // Exercise 3 End
 
-  it('should return an AST for a basic data structure', () => {
+  it.only('should return an AST for a basic data structure', () => {
     const tokens = [
       { type: 'Parenthesis', value: '(' },
       { type: 'Name', value: 'add' },
