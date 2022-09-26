@@ -3,7 +3,6 @@ const { specialForms } = require('./special-forms');
 const { peek, pop } = require('./utilities');
 
 const parenthesize = (tokens) => {
-  console.log({ tokens });
   const token = pop(tokens);
 
   if (isOpeningParenthesis(token.value)) {
@@ -12,8 +11,6 @@ const parenthesize = (tokens) => {
       exprs.push(parenthesize(tokens));
     }
     pop(tokens);
-
-    console.log(exprs);
 
     return exprs;
   }
